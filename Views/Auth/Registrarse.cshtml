@@ -1,0 +1,47 @@
+﻿@model ProyectoEmpresa.Models.Uss
+
+@{
+    ViewBag.Title = "Registro de Usuario";
+}
+
+<h2>Registrarse</h2>
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">
+        @ViewBag.Error
+    </div>
+}
+
+@if (ViewBag.Exito != null)
+{
+    <div class="alert alert-success">
+        @ViewBag.Exito
+    </div>
+}
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.Label("Usuario")
+        @Html.TextBox("usuario", null, new { @class = "form-control", placeholder = "Ingresa tu usuario" })
+    </div>
+    <div class="form-group">
+        @Html.Label("Contraseña")
+        @Html.Password("contraseña", null, new { @class = "form-control", placeholder = "Ingresa tu contraseña" })
+    </div>
+    <div class="form-group">
+        @Html.Label("Confirmar Contraseña")
+        @Html.Password("confirmarContraseña", null, new { @class = "form-control", placeholder = "Repite tu contraseña" })
+    </div>
+    <div class="form-group">
+        @Html.Label("Fecha de Creación")
+        @Html.TextBox("fechacreacion", null, new { @class = "form-control", placeholder = "mm-dd-aa" })
+    </div>
+    <div class="form-group">
+        @Html.Label("Codigo de acceso")
+        @Html.Password("codigo", null, new { @class = "form-control", placeholder = "Codigo Acceso" })
+    </div>
+    <button type="submit" class="btn btn-primary">Registrar</button>
+}
+

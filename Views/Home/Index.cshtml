@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<main>
+    <!-- Hero Section -->
+    <section class="row text-center my-5" aria-labelledby="aspnetTitle">
+        <div class="col-md-12">
+            <h1 id="title" class="display-4">Effective Construction</h1>
+            <p class="lead">Líderes en servicios de construcción para tus proyectos residenciales y comerciales.</p>
+            <p><a href="#services" class="btn btn-primary btn-lg">Descubre nuestros servicios &raquo;</a></p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <div class="row" id="services">
+        <section class="col-md-4 text-center">
+            <img src="/Content/images/diseño.jpg" alt="Construcción de viviendas" class="img-fluid rounded mb-3">
+            <h2>Construcción de Viviendas</h2>
+            <p>Diseñamos y construimos viviendas modernas, sostenibles y adaptadas a tus necesidades.</p>
+            <p><a class="btn btn-outline-dark" href="#">Más información &raquo;</a></p>
+        </section>
+
+        <section class="col-md-4 text-center">
+            <img src="/Content/images/remodelación.jpg" alt="Remodelaciones" class="img-fluid rounded mb-3">
+            <h2>Remodelaciones</h2>
+            <p>Transformamos tus espacios con remodelaciones creativas y funcionales.</p>
+            <p><a class="btn btn-outline-dark" href="#">Más información &raquo;</a></p>
+        </section>
+
+        <section class="col-md-4 text-center">
+            <img src="/Content/images/casa.jpg" alt="Construcción Comercial" class="img-fluid rounded mb-3">
+            <h2>Construcción Comercial</h2>
+            <p>Ofrecemos soluciones de construcción para negocios e instalaciones comerciales.</p>
+            <p><a class="btn btn-outline-dark" href="#">Más información &raquo;</a></p>
+        </section>
+    </div>
+
+    <!-- Additional Information Section -->
+    <div class="row my-5">
+        <section class="col-md-6">
+            <h3>¿Por qué elegirnos?</h3>
+            <p>Contamos con años de experiencia en el sector, un equipo de profesionales calificados y garantías en cada proyecto que realizamos.</p>
+        </section>
+        <section class="col-md-6">
+            <h3>Contáctanos</h3>
+            <p>Si tienes un proyecto en mente, estamos aquí para ayudarte. <a href="~/Home/Contact">Contáctanos</a> hoy y trabajemos juntos.</p>
+        </section>
+    </div>
+
+    <!-- Login Button -->
+    <div class="row text-center my-5">
+        <a href="/Auth/Login" class="btn btn-secondary btn-lg">Iniciar Sesión</a>
+    </div>
+</main>

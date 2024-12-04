@@ -1,0 +1,99 @@
+﻿@{
+    ViewBag.Title = "Contactanos";
+}
+<body>
+<main aria-labelledby="title">
+    <h2 id="title">@ViewBag.Title</h2>
+
+    <address>
+        <span class="contact-icon">👷‍♂️</span>
+        <strong>Ingeniero:</strong><br />
+        Kevin Valderrama<br />
+        <span class="contact-icon">📱</span>
+        <strong>WhatsApp:</strong> +57 3004897185
+    </address>
+
+    <address>
+        <span class="contact-icon">📧</span>
+        <strong>Soporte:</strong>
+        <a href="mailto:Valderramak05@gmail.com">Valderramak05@gmail.com</a>
+    </address>
+
+    <div class="cta">
+        <a href="mailto:Valderramak05@gmail.com">Contáctanos Ahora</a>
+    </div>
+</main>
+</body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+    }
+
+    main {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        font-size: 1.8em;
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 20px;
+    }
+
+    address {
+        font-style: normal;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+
+        address strong {
+            color: #2980b9;
+        }
+
+    a {
+        color: #2980b9;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+    .contact-icon {
+        font-size: 1.2em;
+        margin-right: 8px;
+        vertical-align: middle;
+        color: #2980b9;
+    }
+
+    .cta {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+        .cta a {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #2980b9;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+            .cta a:hover {
+                background-color: #1a6da3;
+            }
+</style>

@@ -1,0 +1,110 @@
+﻿@model IEnumerable<ProyectoEmpresa.Models.Persona>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Empleados</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            margin-top: 30px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .table th {
+            background-color: #2980b9;
+            color: #fff;
+            text-align: center;
+        }
+
+        .table td, .table th {
+            text-align: center;
+        }
+
+        .btn-primary, .btn-danger, .btn-secondary {
+            margin-right: 5px;
+        }
+
+        .logout-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            .logout-container a {
+                text-decoration: none;
+                color: #fff;
+                background-color: #e74c3c;
+                padding: 8px 15px;
+                border-radius: 5px;
+                font-weight: bold;
+                transition: background-color 0.3s;
+            }
+
+                .logout-container a:hover {
+                    background-color: #c0392b;
+                }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logout-container">
+            <h2>Sistema de Gestión de Empleados</h2>
+            <a href="@Url.Action("Login", "Auth")">Cerrar Sesión</a>
+        </div>
+
+        <br />
+
+        <p>
+            @Html.ActionLink("Agregar Persona", "Create", null, new { @class = "btn btn-success" })
+        </p>
+
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Nombre)</th>
+                    <th>@Html.DisplayNameFor(model => model.Apellido)</th>
+                    <th>@Html.DisplayNameFor(model => model.NumeroIdentificacion)</th>
+                    <th>@Html.DisplayNameFor(model => model.Email)</th>
+                    <th>@Html.DisplayNameFor(model => model.FechaCreacion)</th>
+                    <th>@Html.DisplayNameFor(model => model.TipoDoc)</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Apellido)</td>
+                        <td>@Html.DisplayFor(modelItem => item.NumeroIdentificacion)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                        <td>@Html.DisplayFor(modelItem => item.FechaCreacion)</td>
+                        <td>@Html.DisplayFor(modelItem => item.TipoDoc)</td>
+                        <td>
+                            @Html.ActionLink("Editar", "Edit", new { id = item.IdPersona }, new { @class = "btn btn-primary btn-sm" })
+                            @Html.ActionLink("Detalles", "Details", new { id = item.IdPersona }, new { @class = "btn btn-secondary btn-sm" })
+                            @Html.ActionLink("Eliminar", "Delete", new { id = item.IdPersona }, new { @class = "btn btn-danger btn-sm" })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

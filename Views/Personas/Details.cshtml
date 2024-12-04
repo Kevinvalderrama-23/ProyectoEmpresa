@@ -1,0 +1,97 @@
+﻿@model ProyectoEmpresa.Models.Persona
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 class="text-center">Detalles del Empleado</h2>
+
+<div class="details-container p-4 shadow-sm rounded" style="background-color: #f9f9f9; max-width: 600px; margin: 0 auto;">
+    <h3 class="text-center mb-4">¿Detalles del empleado?</h3>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-4 font-weight-bold">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt class="col-sm-4 font-weight-bold">
+            @Html.DisplayNameFor(model => model.Apellido)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Apellido)
+        </dd>
+
+        <dt class="col-sm-4 font-weight-bold">
+            @Html.DisplayNameFor(model => model.NumeroIdentificacion)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.NumeroIdentificacion)
+        </dd>
+
+        <dt class="col-sm-4 font-weight-bold">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt class="col-sm-4 font-weight-bold">
+            @Html.DisplayNameFor(model => model.FechaCreacion)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.FechaCreacion)
+        </dd>
+
+        <dt class="col-sm-4 font-weight-bold">
+            @Html.DisplayNameFor(model => model.TipoDoc)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.TipoDoc)
+        </dd>
+    </dl>
+
+    <div class="text-center mt-4">
+        @Html.ActionLink("Volver a la lista", "Index", null, new { @class = "btn btn-light-red text-white px-4 py-2" })
+    </div>
+</div>
+
+<style>
+    .details-container {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        color: #555;
+    }
+
+    dt {
+        color: #444;
+        font-weight: bold;
+    }
+
+    dd {
+        color: #666;
+    }
+
+    .btn-light-red {
+        background-color: #ff6f61;
+        border: none;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+    }
+
+        .btn-light-red:hover {
+            background-color: #e55a50;
+        }
+</style>
